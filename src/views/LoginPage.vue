@@ -128,14 +128,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Back to Home -->
-            <div class="text-center mt-4">
-              <router-link to="/" class="btn btn-outline-secondary">
-                <i class="bi bi-arrow-left me-2"></i>
-                Back to Home
-              </router-link>
-            </div>
           </div>
         </div>
       </div>

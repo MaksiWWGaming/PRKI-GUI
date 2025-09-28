@@ -63,10 +63,6 @@
               <i class="bi bi-envelope me-2"></i>
               xxx@xxx.xxx
             </p>
-            <p class="small mb-1">
-              <i class="bi bi-telephone me-2"></i>
-              +381 xx xxx xxxx
-            </p>
             <p class="small mb-0">
               <i class="bi bi-geo-alt me-2"></i>
               ICT College, Belgrade, Serbia
@@ -76,11 +72,11 @@
           <!-- Social Links -->
           <div class="d-flex gap-3">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.instagram.com/"
               class="hover-social"
-              aria-label="Facebook"
+              aria-label="Instagram"
             >
-              <i class="bi bi-facebook fs-5"></i>
+              <i class="bi bi-instagram fs-5"></i>
             </a>
             <a
               href="https://x.com/home?lang=en"
@@ -88,13 +84,6 @@
               aria-label="Twitter"
             >
               <i class="bi bi-twitter fs-5"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/feed/"
-              class="hover-social"
-              aria-label="LinkedIn"
-            >
-              <i class="bi bi-linkedin fs-5"></i>
             </a>
             <a
               href="https://github.com"

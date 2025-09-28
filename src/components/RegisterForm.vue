@@ -206,7 +206,6 @@
           <a
             href="#"
             class="text-decoration-none"
-            @click.prevent="$emit('show-terms')"
           >
             Terms and Conditions
           </a>
@@ -214,7 +213,6 @@
           <a
             href="#"
             class="text-decoration-none"
-            @click.prevent="$emit('show-privacy')"
           >
             Privacy Policy
           </a>
@@ -310,8 +308,6 @@ const emit = defineEmits([
   "success",
   "error",
   "switch-to-login",
-  "show-terms",
-  "show-privacy",
 ]);
 
 // Composables

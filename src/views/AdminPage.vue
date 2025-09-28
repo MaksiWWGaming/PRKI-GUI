@@ -23,59 +23,10 @@
                 </div>
                 <div class="col-md-4 text-md-end">
                   <div class="admin-actions">
-                    <button
-                      class="btn btn-dark me-2"
-                      @click="showSystemInfo = !showSystemInfo"
-                    >
-                      <i class="bi bi-info-circle me-1"></i>
-                      System Info
-                    </button>
                     <router-link to="/dashboard" class="btn btn-outline-dark">
                       <i class="bi bi-arrow-left me-1"></i>
                       Back to Dashboard
                     </router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- System Information (Collapsible) -->
-      <div v-if="showSystemInfo" class="row mb-4">
-        <div class="col-12">
-          <div class="card border-info">
-            <div class="card-header bg-info text-white">
-              <h5 class="mb-0">
-                <i class="bi bi-cpu me-2"></i>
-                System Information
-              </h5>
-            </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-3 col-sm-6 mb-3">
-                  <div class="info-item">
-                    <div class="info-label">Application Version</div>
-                    <div class="info-value">v1.0.0</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-3">
-                  <div class="info-item">
-                    <div class="info-label">Vue Version</div>
-                    <div class="info-value">3.5.18</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-3">
-                  <div class="info-item">
-                    <div class="info-label">Total Users</div>
-                    <div class="info-value">{{ totalUsers }}</div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-3">
-                  <div class="info-item">
-                    <div class="info-label">System Uptime</div>
-                    <div class="info-value">{{ systemUptime }}</div>
                   </div>
                 </div>
               </div>
@@ -296,10 +247,6 @@
                         <i class="bi bi-arrow-clockwise me-2"></i>
                         Clear Cache
                       </button>
-                      <button class="btn btn-outline-danger" @click="resetData">
-                        <i class="bi bi-exclamation-triangle me-2"></i>
-                        Reset All Data
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -368,7 +315,6 @@
 import { ref, computed, onMounted } from "vue";
 import { useAuthStore } from "@/stores/auth";
 import { useEntitiesStore } from "@/stores/entities";
-// import AdminControls from '@/components/AdminControls.vue'
 
 // Composables
 const authStore = useAuthStore();
@@ -376,7 +322,6 @@ const entitiesStore = useEntitiesStore();
 
 // State
 const activeTab = ref("entities");
-const showSystemInfo = ref(false);
 const users = ref([]);
 const settings = ref({
   maintenanceMode: false,
@@ -491,23 +436,6 @@ function clearCache() {
     });
 
     alert("Cache cleared successfully!");
-  }
-}
-
-function resetData() {
-  if (
-    confirm(
-      "Are you sure you want to reset ALL data? This action cannot be undone!"
-    )
-  ) {
-    if (
-      confirm(
-        "This will delete all entities and reset the application. Are you absolutely sure?"
-      )
-    ) {
-      entitiesStore.resetEntities();
-      alert("Data reset successfully!");
-    }
   }
 }
 
