@@ -97,26 +97,6 @@
               View Details
             </button>
 
-            <button
-              v-if="showEditButton"
-              class="btn btn-outline-secondary btn-sm"
-              @click="handleEdit"
-              :disabled="loading"
-            >
-              <i class="bi bi-pencil me-1"></i>
-              Edit
-            </button>
-
-            <button
-              v-if="showDeleteButton"
-              class="btn btn-outline-danger btn-sm"
-              @click="handleDelete"
-              :disabled="loading"
-            >
-              <i class="bi bi-trash me-1"></i>
-              Delete
-            </button>
-
             <!-- Custom action buttons -->
             <button
               v-for="action in customActions"
@@ -139,23 +119,6 @@
             <span class="visually-hidden">Loading...</span>
           </div>
         </div>
-      </div>
-
-      <!-- Card Footer -->
-      <div
-        v-if="showFooter && (createdAt || updatedAt || footerText)"
-        class="card-footer bg-transparent"
-      >
-        <small class="text-muted">
-          <i v-if="createdAt" class="bi bi-calendar-plus me-1"></i>
-          <span v-if="createdAt">Created: {{ formatDate(createdAt) }}</span>
-          <span v-if="createdAt && updatedAt"> | </span>
-          <i v-if="updatedAt" class="bi bi-calendar-check me-1"></i>
-          <span v-if="updatedAt">Updated: {{ formatDate(updatedAt) }}</span>
-          <span v-if="footerText && !createdAt && !updatedAt">{{
-            footerText
-          }}</span>
-        </small>
       </div>
     </div>
   </div>
@@ -190,18 +153,6 @@ const props = defineProps({
     type: Array,
     default: () => [],
   },
-  createdAt: {
-    type: String,
-    default: "",
-  },
-  updatedAt: {
-    type: String,
-    default: "",
-  },
-  footerText: {
-    type: String,
-    default: "",
-  },
   loading: {
     type: Boolean,
     default: false,
@@ -211,18 +162,6 @@ const props = defineProps({
     default: true,
   },
   showViewButton: {
-    type: Boolean,
-    default: true,
-  },
-  showEditButton: {
-    type: Boolean,
-    default: false,
-  },
-  showDeleteButton: {
-    type: Boolean,
-    default: false,
-  },
-  showFooter: {
     type: Boolean,
     default: true,
   },

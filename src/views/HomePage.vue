@@ -239,7 +239,7 @@
         </div>
 
         <!-- Load More Button -->
-        <div v-if="!searchQuery && hasMore" class="text-center mt-5">
+        <div v-if="!searchQuery && hasMore" class="text-center mt-5 mb-5">
           <button
             class="btn btn-primary btn-lg"
             @click="loadMorePokemon"

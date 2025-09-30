@@ -57,11 +57,11 @@
 
         <!-- Contact & Social -->
         <div class="col-md-4 mb-3">
-          <h6 class="fw-bold mb-3">Connect With Us</h6>
+          <h6 class="fw-bold mb-3">Connect</h6>
           <div class="mb-3">
             <p class="small mb-1">
               <i class="bi bi-envelope me-2"></i>
-              xxx@xxx.xxx
+              maksim.tadic.110.23@ict.edu.rs
             </p>
             <p class="small mb-0">
               <i class="bi bi-geo-alt me-2"></i>
@@ -72,21 +72,7 @@
           <!-- Social Links -->
           <div class="d-flex gap-3">
             <a
-              href="https://www.instagram.com/"
-              class="hover-social"
-              aria-label="Instagram"
-            >
-              <i class="bi bi-instagram fs-5"></i>
-            </a>
-            <a
-              href="https://x.com/home?lang=en"
-              class="hover-social"
-              aria-label="Twitter"
-            >
-              <i class="bi bi-twitter fs-5"></i>
-            </a>
-            <a
-              href="https://github.com"
+              href="https://github.com/MaksiWWGaming"
               class="hover-social"
               aria-label="GitHub"
             >
